@@ -14,5 +14,12 @@ export { default as RowmanceRobe } from './RowmanceRobe'
 export { default as RowmanceTableRobe } from './RowmanceTableRobe'
 export { default as SwitchRobe } from './SwitchRobe'
 export { default as TableRobe } from './TableRobe'
-export type { InputRobeProps, LayoutRobeProps, LinkRobeProps, NavbarRobeProps, ProfileRobeProps } from './types'
+export { default as useLinkRobeColor } from './useLinkRobeColor'
+export type {
+  InputRobeProps,
+  LayoutRobeProps,
+  LinkRobeProps,
+  NavbarRobeProps,
+  ProfileRobeProps
+} from './types'
 export const { context: robesContext } = creation
