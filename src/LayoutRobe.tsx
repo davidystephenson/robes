@@ -1,12 +1,9 @@
-import { JSX, ReactNode } from 'react'
-import { Container, ContainerProps } from '@chakra-ui/react'
+import { JSX } from 'react'
+import { Container } from '@chakra-ui/react'
 import NavbarRobe from './NavbarRobe'
-import { NavbarRobeProps } from './types'
+import { LayoutRobeProps } from './types'
 
-export default function LayoutRobe (props: ContainerProps & {
-  children: ReactNode
-  navbar?: NavbarRobeProps
-}): JSX.Element {
+export default function LayoutRobe (props: LayoutRobeProps): JSX.Element {
   const { children, navbar, ...rest } = props
   return (
     <Container pt='10px' {...rest}>

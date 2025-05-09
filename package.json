@@ -1,13 +1,46 @@
 {
   "name": "robes",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && npx tsup",
-    "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "table",
+    "chakra-ui",
+    "virtualization",
+    "components",
+    "ui",
+    "library",
+    "frontend",
+    "search",
+    "filter",
+    "button",
+    "error",
+    "popover",
+    "feedback"
+  ],
+  "author": {
+    "name": "David Y. Stephenson",
+    "email": "david@davidystephenson.com"
+  },
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidystephenson/robes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidystephenson/robes/issues"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.10.7",

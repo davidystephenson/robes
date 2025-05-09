@@ -1,30 +1,26 @@
-import { ReactNode, forwardRef } from 'react'
-import { FormControl, FormControlProps, FormErrorMessage, FormLabel, Input, InputGroup, InputProps, InputRightElement } from '@chakra-ui/react'
+import { forwardRef } from 'react'
+import { FormControl, FormErrorMessage, FormLabel, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 import useDisabled from './useDisabled'
+import { InputRobeProps } from './types'
 
 const InputRobe = forwardRef<
 HTMLInputElement,
-InputProps & {
-  controlProps?: FormControlProps
-  errorMessage?: string
-  label?: string
-  rightElement?: ReactNode
-}
+InputRobeProps
 >((props, ref) => {
   const disabled = useDisabled(props)
-  const { type, errorMessage, label, rightElement, ...restProps } = props
+  const { type, error, label, rightElement: right, ...restProps } = props
   const dateField = type === 'date'
   const inputType = disabled && dateField ? 'text' : type
-  const invalid = errorMessage != null
+  const invalid = error != null
   const errorView = invalid && (
-    <FormErrorMessage>{errorMessage}</FormErrorMessage>
+    <FormErrorMessage>{error}</FormErrorMessage>
   )
-  const rightView = rightElement != null && (
-    <InputRightElement w='fit-content'>{rightElement}</InputRightElement>
+  const rightView = right != null && (
+    <InputRightElement w='fit-content'>{right}</InputRightElement>
   )
   const labelView = label != null && <FormLabel>{label}</FormLabel>
   return (
-    <FormControl isInvalid={invalid} {...props.controlProps}>
+    <FormControl isInvalid={invalid} {...props.control}>
       {labelView}
       <InputGroup>
         <Input

@@ -10,7 +10,6 @@ import TableRobe from './TableRobe'
 import ImpressedRobe from './ImpressedRobe'
 import IconImpressedRobe from './IconImpressedRobe'
 import { useState } from 'react'
-import RowmanceRobe from './RowmanceRobe'
 import LongRowmanceRobe from './LongRowmanceRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
