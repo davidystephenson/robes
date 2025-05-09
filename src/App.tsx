@@ -7,17 +7,54 @@ import LayoutRobe from './LayoutRobe'
 import LinkRobe from './LinkRobe'
 import RobesProvider from './RobesProvider'
 import TableRobe from './TableRobe'
+import ImpressedRobe from './ImpressedRobe'
+import IconImpressedRobe from './IconImpressedRobe'
+import { useState } from 'react'
+import RowmanceRobe from './RowmanceRobe'
+import LongRowmanceRobe from './LongRowmanceRobe'
+
+const rows = Array.from({ length: 10000 }, (_, i) => {
+  return {
+    name: `Item ${i + 1}`,
+    email: `Email ${i + 1}`
+  }
+})
 
 function App() {
+  const [filtered, setFiltered] = useState(rows)
+  function filter(props: {
+    query?: string,
+  }) {
+    const filtered = rows.filter(row => {
+      if (!props.query) {
+        return true
+      }
+      return row.name.includes(props.query)
+    })
+    setFiltered(filtered)
+  }
+
   return (
     <RobesProvider>
-      <LayoutRobe>
+      <LayoutRobe navbar={{
+        profile: {
+          button: {
+            error: 'Test',
+          },
+        },
+      }}>
         <LinkRobe href='#'>Home</LinkRobe>
         <form>
           <InputRobe />
           <HStack>
             <ButtonRobe type='submit'>Submit</ButtonRobe>
             <IconButtonRobe icon={<FaSearch />} aria-label='Search' />
+            <ImpressedRobe error='Test'>Test</ImpressedRobe>
+            <IconImpressedRobe
+              icon={<FaSearch />}
+              aria-label='Search'
+              error='Test'
+            />
           </HStack>
           <TableRobe>
             <Thead>
@@ -33,6 +70,20 @@ function App() {
               </Tr>
             </Tbody>
           </TableRobe>
+          <LongRowmanceRobe
+            data={filtered}
+            Cells={({ row }) => {
+              return (
+                <>
+                  <Td>{row.name}</Td>
+                  <Td>{row.email}</Td>
+                </>
+              )
+            }}
+            style={{ height: '300px' }}
+            columns={['name', 'email']}
+            filter={filter}
+          />
         </form>
       </LayoutRobe>
     </RobesProvider>

@@ -1,16 +1,12 @@
 import { MdLogout } from 'react-icons/md'
-import { Menu, MenuButton, MenuItem, MenuList, MenuProps, useColorMode } from '@chakra-ui/react'
-import { JSX, ReactNode } from 'react'
+import { Menu, MenuButton, MenuItem, MenuList, useColorMode } from '@chakra-ui/react'
+import { JSX } from 'react'
 import ColorSwitchRobe from './ColorSwitchRobe'
-import ButtonRobe from './ButtonRobe'
+import ImpressedRobe from './ImpressedRobe'
+import { ProfileRobeProps } from './types'
 
-export default function ProfileRobe (props: Omit<MenuProps, 'children'> & {
-  children?: ReactNode
-  loading?: boolean
-  onColorSwitch?: () => void | Promise<void>
-  onLogout?: () => void | Promise<void>
-}): JSX.Element {
-  const { children, loading, onLogout, onColorSwitch, ...rest } = props
+export default function ProfileRobe (props: ProfileRobeProps): JSX.Element {
+  const { children, button: buttonProps, loading, onLogout, onColorSwitch, ...rest } = props
   const colorMode = useColorMode()
 
   function handleClick (): void {
@@ -24,8 +20,9 @@ export default function ProfileRobe (props: Omit<MenuProps, 'children'> & {
   return (
     <Menu {...rest}>
       <MenuButton
-        as={ButtonRobe}
+        as={ImpressedRobe}
         isLoading={loading}
+        {...buttonProps}
       >
         {children}
       </MenuButton>
