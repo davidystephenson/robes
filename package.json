@@ -1,7 +1,7 @@
 {
   "name": "robes",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -46,7 +46,7 @@
     "@chakra-ui/react": "^2.10.7",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "context-creator": "^0.1.23",
+    "context-creator": "^0.1.25",
     "framer-motion": "^12.10.1",
     "impressed": "^0.1.6",
     "react": "^19.0.0",
