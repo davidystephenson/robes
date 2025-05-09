@@ -1,5 +1,6 @@
 import creation from './robesContext'
 export { default as ButtonRobe } from './ButtonRobe'
+export { default as ColorSwitchRobe } from './ColorSwitchRobe'
 export { default as IconButtonRobe } from './IconButtonRobe'
 export { default as IconImpressedRobe } from './IconImpressedRobe'
 export { default as InputRobe } from './InputRobe'
