@@ -12,12 +12,12 @@ const robesContext = contextCreator({
   }) => {
     const mounted = useMounted()
     const chakraMode = useColorMode()
-    const colorMode = props.colorMode ?? chakraMode
+    const colorMode = props.colorMode ?? chakraMode.colorMode
     const darkened = colorMode === 'dark'
     const borderColor = darkened
       ? 'var(--chakra-colors-gray-700)'
       : 'var(--chakra-colors-gray-100)'
-    const colorScheme = darkened
+    const purple = darkened
       ? 'var(--chakra-colors-purple-200)'
       : 'var(--chakra-colors-purple-600)'
     const red = darkened ? 'pink' : 'red'
@@ -27,10 +27,10 @@ const robesContext = contextCreator({
         colorMode,
         darkened,
         borderColor,
-        colorScheme,
+        purple,
         red
       }
-    }, [mounted, colorMode, darkened, borderColor, colorScheme, red])
+    }, [mounted, colorMode, darkened, borderColor, purple, red])
     return value
   }
 })

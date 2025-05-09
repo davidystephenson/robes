@@ -11,6 +11,7 @@ import ImpressedRobe from './ImpressedRobe'
 import IconImpressedRobe from './IconImpressedRobe'
 import { useState } from 'react'
 import LongRowmanceRobe from './LongRowmanceRobe'
+import { ColorSwitchRobe } from '.'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -42,6 +43,7 @@ function App() {
           },
         },
       }}>
+        <ColorSwitchRobe />
         <LinkRobe href='#'>Home</LinkRobe>
         <form>
           <InputRobe />

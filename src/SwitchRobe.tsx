@@ -15,6 +15,6 @@ export default function SwitchRobe (props: SwitchProps & {
   }
 
   return (
-    <Switch isDisabled={disabled} {...rest} />
+    <Switch colorScheme='purple' isDisabled={disabled} {...rest} />
   )
 }

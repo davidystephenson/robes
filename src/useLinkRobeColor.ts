@@ -4,7 +4,7 @@ import { LinkRobeProps } from './types'
 export default function useLinkRobeColor (props: LinkRobeProps): string {
   const robes = robesContext.use()
   if (props.active === true) {
-    return robes.colorScheme
+    return robes.purple
   }
   return 'inherit'
 }
