@@ -1,19 +1,12 @@
-import { LinkProps } from '@chakra-ui/react'
-import { JSX, ReactNode } from 'react'
+import { JSX } from 'react'
 import LinkRobe from './LinkRobe'
+import { LinkableRobeProps } from './types'
 
-export default function LinkableRobe (props: Omit<LinkProps, 'href'> & {
-  children: ReactNode
-  href?: string | null
-}): JSX.Element {
+export default function LinkableRobe (props: LinkableRobeProps): JSX.Element {
   if (props.href == null) {
-    return (
-      <>{props.children}</>
-    )
+    return <>{props.children}</>
   }
   return (
-    <LinkRobe {...props} href={props.href}>
-      {props.children}
-    </LinkRobe>
+    <LinkRobe {...props} href={props.href} />
   )
 }

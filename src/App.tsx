@@ -3,7 +3,6 @@ import { FaSearch } from 'react-icons/fa'
 import ButtonRobe from './ButtonRobe'
 import IconButtonRobe from './IconButtonRobe'
 import InputRobe from './InputRobe'
-import LayoutRobe from './LayoutRobe'
 import LinkRobe from './LinkRobe'
 import RobesProvider from './RobesProvider'
 import TableRobe from './TableRobe'
@@ -36,57 +35,49 @@ function App() {
 
   return (
     <RobesProvider>
-      <LayoutRobe navbar={{
-        profile: {
-          button: {
-            error: 'Test',
-          },
-        },
-      }}>
-        <ColorSwitchRobe />
-        <LinkRobe href='#'>Home</LinkRobe>
-        <form>
-          <InputRobe />
-          <HStack>
-            <ButtonRobe type='submit'>Submit</ButtonRobe>
-            <IconButtonRobe icon={<FaSearch />} aria-label='Search' />
-            <ImpressedRobe error='Test'>Test</ImpressedRobe>
-            <IconImpressedRobe
-              icon={<FaSearch />}
-              aria-label='Search'
-              error='Test'
-            />
-          </HStack>
-          <TableRobe>
-            <Thead>
-              <Tr>
-                <Th>Name</Th>
-                <Th>Size</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Dorothy</Td>
-                <Td>Small</Td>
-              </Tr>
-            </Tbody>
-          </TableRobe>
-          <LongRowmanceRobe
-            data={filtered}
-            Cells={({ row }) => {
-              return (
-                <>
-                  <Td>{row.name}</Td>
-                  <Td>{row.email}</Td>
-                </>
-              )
-            }}
-            style={{ height: '300px' }}
-            columns={['name', 'email']}
-            filter={filter}
+      <ColorSwitchRobe />
+      <LinkRobe href='#'>Home</LinkRobe>
+      <form>
+        <InputRobe />
+        <HStack>
+          <ButtonRobe type='submit'>Submit</ButtonRobe>
+          <IconButtonRobe icon={<FaSearch />} aria-label='Search' />
+          <ImpressedRobe error='Test'>Test</ImpressedRobe>
+          <IconImpressedRobe
+            icon={<FaSearch />}
+            aria-label='Search'
+            error='Test'
           />
-        </form>
-      </LayoutRobe>
+        </HStack>
+        <TableRobe>
+          <Thead>
+            <Tr>
+              <Th>Name</Th>
+              <Th>Size</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            <Tr>
+              <Td>Dorothy</Td>
+              <Td>Small</Td>
+            </Tr>
+          </Tbody>
+        </TableRobe>
+        <LongRowmanceRobe
+          data={filtered}
+          Cells={({ row }) => {
+            return (
+              <>
+                <Td>{row.name}</Td>
+                <Td>{row.email}</Td>
+              </>
+            )
+          }}
+          style={{ height: '300px' }}
+          columns={['name', 'email']}
+          filter={filter}
+        />
+      </form>
     </RobesProvider>
   )
 }

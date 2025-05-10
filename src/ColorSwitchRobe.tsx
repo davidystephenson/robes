@@ -16,9 +16,7 @@ export default function ColorSwitchRobe(props: StackProps & {
 
   return (
     <HStack {...rest}>
-      <Box>
-        Light
-      </Box>
+      <Box>Light</Box>
       <MdLightMode />
       <SwitchRobe
         inert={inert}
@@ -27,9 +25,7 @@ export default function ColorSwitchRobe(props: StackProps & {
         onChange={colorMode.toggleColorMode}
       />
       <MdDarkMode />
-      <Box>
-        Dark
-      </Box>
+      <Box>Dark</Box>
     </HStack>
   )
 }

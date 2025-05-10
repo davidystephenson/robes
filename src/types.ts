@@ -1,5 +1,6 @@
 import { ImpressedProps } from "impressed"
 import {
+  ButtonProps,
   ContainerProps,
   FormControlProps,
   HeadingProps,
@@ -9,6 +10,14 @@ import {
   StackProps
 } from "@chakra-ui/react"
 import { ReactNode } from "react"
+
+export type ButtonLinkRobeProps = LinkProps & {
+  button: ButtonProps
+}
+
+export type ButtonLinkableRobeProps = Omit<ButtonLinkRobeProps, 'href'> & {
+  href?: string | null
+}
 
 export type InputRobeProps = InputProps & {
   control?: FormControlProps
