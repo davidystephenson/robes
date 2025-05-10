@@ -14,11 +14,7 @@ import { ReactNode } from "react"
 export type ButtonLinkRobeProps = LinkProps & {
   button: ButtonProps
 }
-
-export type ButtonLinkableRobeProps = Omit<ButtonLinkRobeProps, 'href'> & {
-  href?: string | null
-}
-
+export type ButtonLinkableRobeProps = Linkable<ButtonLinkRobeProps>
 export type InputRobeProps = InputProps & {
   control?: FormControlProps
   error?: ReactNode
@@ -32,9 +28,11 @@ export type LayoutRobeProps = ContainerProps & {
 export type LinkRobeProps = LinkProps & {
   active?: boolean
 }
-export type LinkableRobeProps = Omit<LinkRobeProps, 'href'> & {
-  children: ReactNode
+export type Linkable<Props extends LinkProps> = Omit<Props, 'href'> & {
   href?: string | null
+}
+export type LinkableRobeProps = Linkable<LinkRobeProps> & {
+  children: ReactNode
 }
 export type NavbarRobeProps = Omit<StackProps, 'children'> & {
   children?: ReactNode
