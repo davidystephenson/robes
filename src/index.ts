@@ -16,7 +16,7 @@ export { default as RowmanceRobe } from './RowmanceRobe'
 export { default as RowmanceTableRobe } from './RowmanceTableRobe'
 export { default as SwitchRobe } from './SwitchRobe'
 export { default as TableRobe } from './TableRobe'
-export { default as useLinkRobeColor } from './useLinkRobeColor'
+export { default as useLinkRobeColor } from './useLinkRobe'
 export type {
   ButtonLinkRobeProps,
   ButtonLinkableRobeProps,

@@ -1,12 +1,12 @@
 import { Link } from '@chakra-ui/react'
 import { JSX } from 'react'
 import { LinkRobeProps } from './types'
-import useLinkRobeColor from './useLinkRobeColor'
+import useLinkRobe from './useLinkRobe'
 
 export default function LinkRobe (props: LinkRobeProps): JSX.Element {
-  const color = useLinkRobeColor(props)
+  const link = useLinkRobe(props)
   return (
-    <Link {...props} color={color}>
+    <Link {...props} {...link}>
       {props.children}
     </Link>
   )
