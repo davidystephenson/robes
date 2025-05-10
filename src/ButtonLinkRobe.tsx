@@ -4,9 +4,10 @@ import LinkRobe from './LinkRobe'
 import ButtonRobe from './ButtonRobe'
 
 export default function ButtonLinkRobe (props: ButtonLinkRobeProps): JSX.Element {
+  const { button, ...rest } = props
   return (
-    <LinkRobe {...props}>
-      <ButtonRobe {...props.button}>
+    <LinkRobe {...rest}>
+      <ButtonRobe {...button}>
         {props.children}
       </ButtonRobe>
     </LinkRobe>
