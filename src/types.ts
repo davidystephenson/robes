@@ -12,7 +12,7 @@ import {
 import { ReactNode } from "react"
 
 export type ButtonLinkRobeProps = LinkProps & {
-  button: ButtonProps
+  button?: ButtonProps
 }
 export type ButtonLinkableRobeProps = Linkable<ButtonLinkRobeProps>
 export type InputRobeProps = InputProps & {
