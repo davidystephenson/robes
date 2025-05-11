@@ -11,7 +11,6 @@ export default function ProfileRobe (props: ProfileRobeProps): JSX.Element {
 
   function handleClick (event: React.MouseEvent<HTMLButtonElement>): void {
     event.preventDefault()
-    console.log(event)
     if (onColorSwitch) {
       onColorSwitch()
     } else {
