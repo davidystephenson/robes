@@ -9,7 +9,9 @@ export default function ProfileRobe (props: ProfileRobeProps): JSX.Element {
   const { children, button: buttonProps, loading, onLogout, onColorSwitch, ...rest } = props
   const colorMode = useColorMode()
 
-  function handleClick (): void {
+  function handleClick (event: React.MouseEvent<HTMLButtonElement>): void {
+    event.preventDefault()
+    console.log(event)
     if (onColorSwitch) {
       onColorSwitch()
     } else {
