@@ -12,6 +12,7 @@ const ButtonRobe = forwardRef<HTMLButtonElement, ButtonProps>((
       <Button
         colorScheme='purple'
         size='sm'
+        width='fit-content'
         {...props}
         isDisabled={disabled}
         ref={ref}

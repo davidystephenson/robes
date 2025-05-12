@@ -1,16 +1,10 @@
-import { Thead, Tr, Th, Tbody, Td, HStack } from '@chakra-ui/react'
-import { FaSearch } from 'react-icons/fa'
+import { Stack } from '@chakra-ui/react'
 import ButtonRobe from './ButtonRobe'
-import IconButtonRobe from './IconButtonRobe'
 import InputRobe from './InputRobe'
-import LinkRobe from './LinkRobe'
 import RobesProvider from './RobesProvider'
-import TableRobe from './TableRobe'
-import ImpressedRobe from './ImpressedRobe'
-import IconImpressedRobe from './IconImpressedRobe'
 import { useState } from 'react'
+import TestCells from './TestCells'
 import LongRowmanceRobe from './LongRowmanceRobe'
-import { ColorSwitchRobe, ProfileRobe } from '.'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -35,50 +29,16 @@ function App() {
 
   return (
     <RobesProvider>
-      <ColorSwitchRobe />
-      <LinkRobe href='#'>Home</LinkRobe>
-      <ProfileRobe />
-      <form>
+      <Stack>
         <InputRobe />
-        <HStack>
-          <ButtonRobe type='submit'>Submit</ButtonRobe>
-          <IconButtonRobe icon={<FaSearch />} aria-label='Search' />
-          <ImpressedRobe error='Test'>Test</ImpressedRobe>
-          <IconImpressedRobe
-            icon={<FaSearch />}
-            aria-label='Search'
-            error='Test'
-          />
-        </HStack>
-        <TableRobe>
-          <Thead>
-            <Tr>
-              <Th>Name</Th>
-              <Th>Size</Th>
-            </Tr>
-          </Thead>
-          <Tbody>
-            <Tr>
-              <Td>Dorothy</Td>
-              <Td>Small</Td>
-            </Tr>
-          </Tbody>
-        </TableRobe>
-        <LongRowmanceRobe
-          data={filtered}
-          Cells={({ row }) => {
-            return (
-              <>
-                <Td>{row.name}</Td>
-                <Td>{row.email}</Td>
-              </>
-            )
-          }}
-          style={{ height: '300px' }}
-          columns={['name', 'email']}
-          filter={filter}
-        />
-      </form>
+        <ButtonRobe>Test</ButtonRobe>
+      </Stack>
+      <LongRowmanceRobe
+        data={filtered}
+        Cells={TestCells}
+        columns={['Name', 'Email']}
+        filter={filter}
+      />
     </RobesProvider>
   )
 }
