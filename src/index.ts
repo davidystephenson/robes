@@ -3,6 +3,7 @@ export { default as ButtonRobe } from './ButtonRobe'
 export { default as ButtonLinkRobe } from './ButtonLinkRobe'
 export { default as ButtonLinkableRobe } from './ButtonLinkableRobe'
 export { default as ColorSwitchRobe } from './ColorSwitchRobe'
+export { default as FormRobe } from './FormRobe'
 export { default as IconButtonRobe } from './IconButtonRobe'
 export { default as IconImpressedRobe } from './IconImpressedRobe'
 export { default as ImpressedRobe } from './ImpressedRobe'
@@ -20,6 +21,7 @@ export { default as useLinkRobe } from './useLinkRobe'
 export type {
   ButtonLinkRobeProps,
   ButtonLinkableRobeProps,
+  FormRobeProps,
   InputRobeProps,
   LayoutRobeProps,
   LinkRobeProps,

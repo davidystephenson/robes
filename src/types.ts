@@ -1,5 +1,6 @@
 import { ImpressedProps } from "impressed"
 import {
+  BoxProps,
   ButtonProps,
   ContainerProps,
   FormControlProps,
@@ -9,7 +10,7 @@ import {
   MenuProps,
   StackProps
 } from "@chakra-ui/react"
-import { ReactNode } from "react"
+import { HTMLAttributes, ReactNode } from "react"
 
 export type ButtonLinkRobeProps = LinkProps & {
   button?: ButtonProps
@@ -20,6 +21,9 @@ export type InputRobeProps = InputProps & {
   error?: ReactNode
   label?: string
   rightElement?: ReactNode
+}
+export type FormRobeProps = BoxProps & HTMLAttributes<HTMLFormElement> & {
+  stack?: StackProps
 }
 export type LayoutRobeProps = ContainerProps & {
   children?: ReactNode

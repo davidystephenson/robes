@@ -1,10 +1,10 @@
-import { Stack } from '@chakra-ui/react'
 import ButtonRobe from './ButtonRobe'
 import InputRobe from './InputRobe'
 import RobesProvider from './RobesProvider'
 import { useState } from 'react'
 import TestCells from './TestCells'
 import LongRowmanceRobe from './LongRowmanceRobe'
+import FormRobe from './FormRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -29,10 +29,13 @@ function App() {
 
   return (
     <RobesProvider>
-      <Stack>
-        <InputRobe />
-        <ButtonRobe>Test</ButtonRobe>
-      </Stack>
+      <FormRobe onSubmit={(event) => {
+        event.preventDefault()
+        console.log('a')
+      }}>
+        <InputRobe name='query' />
+        <ButtonRobe type='submit'>Test</ButtonRobe>
+      </FormRobe>
       <LongRowmanceRobe
         data={filtered}
         Cells={TestCells}
