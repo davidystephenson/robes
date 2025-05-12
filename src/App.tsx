@@ -27,12 +27,14 @@ function App() {
     setFiltered(filtered)
   }
 
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    console.log('a')
+  }
+
   return (
     <RobesProvider>
-      <FormRobe onSubmit={(event) => {
-        event.preventDefault()
-        console.log('a')
-      }}>
+      <FormRobe onSubmit={handleSubmit}>
         <InputRobe name='query' />
         <ButtonRobe type='submit'>Test</ButtonRobe>
       </FormRobe>
