@@ -5,6 +5,9 @@ import { useState } from 'react'
 import TestCells from './TestCells'
 import LongRowmanceRobe from './LongRowmanceRobe'
 import FormRobe from './FormRobe'
+import MenuRobe from './MenuRobe'
+import { MenuItem } from '@chakra-ui/react'
+import ColorSwitchRobe from './ColorSwitchRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -34,6 +37,13 @@ function App() {
 
   return (
     <RobesProvider>
+      <MenuRobe>
+        <MenuItem>Test</MenuItem>
+      </MenuRobe>
+      <ColorSwitchRobe />
+      <MenuRobe loading>
+        <MenuItem>Test</MenuItem>
+      </MenuRobe>
       <FormRobe onSubmit={handleSubmit}>
         <InputRobe name='query' />
         <ButtonRobe type='submit'>Test</ButtonRobe>

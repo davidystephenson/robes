@@ -23,22 +23,22 @@ export default function App() {
         <form>
           <InputRobe />
           <ButtonRobe type='submit'>Submit</ButtonRobe>
-          <IconButtonRobe icon={<FaSearch />} aria-label='Search' />
-          <TableRobe>
-            <Thead>
-              <Tr>
-                <Th>Name</Th>
-                <Th>Size</Th>
-              </Tr>
-            </Thead>
-            <Tbody>
-              <Tr>
-                <Td>Dorothy</Td>
-                <Td>Small</Td>
-              </Tr>
-            </Tbody>
-          </TableRobe>
         </form>
+        <IconButtonRobe icon={<FaSearch />} aria-label='Search' />
+        <TableRobe>
+          <Thead>
+            <Tr>
+              <Th>Name</Th>
+              <Th>Size</Th>
+            </Tr>
+          </Thead>
+          <Tbody>
+            <Tr>
+              <Td>Dorothy</Td>
+              <Td>Small</Td>
+            </Tr>
+          </Tbody>
+        </TableRobe>
       </LayoutRobe>
     </RobesProvider>
   )

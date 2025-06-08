@@ -11,6 +11,9 @@ export { default as InputRobe } from './InputRobe'
 export { default as LinkableRobe } from './LinkableRobe'
 export { default as LinkRobe } from './LinkRobe'
 export { default as LongRowmanceRobe } from './LongRowmanceRobe'
+export { default as MenuButtonRobe } from './MenuButtonRobe'
+export { default as MenuRobe } from './MenuRobe'
+export { default as ReelingRobe } from './ReelingRobe'
 export { default as ProfileRobe } from './ProfileRobe'
 export { default as RobesProvider } from './RobesProvider'
 export { default as RowmanceRobe } from './RowmanceRobe'
@@ -26,6 +29,8 @@ export type {
   LayoutRobeProps,
   LinkRobeProps,
   LinkableRobeProps,
+  MenuRobeProps,
+  MenuButtonRobeProps,
   NavbarRobeProps,
   ProfileRobeProps
 } from './types'

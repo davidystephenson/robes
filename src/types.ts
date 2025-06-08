@@ -5,12 +5,14 @@ import {
   ContainerProps,
   FormControlProps,
   HeadingProps,
+  IconButtonProps,
   InputProps,
   LinkProps,
+  MenuButtonProps,
   MenuProps,
   StackProps
 } from "@chakra-ui/react"
-import { HTMLAttributes, ReactNode } from "react"
+import { HTMLAttributes, JSX, ReactNode } from "react"
 
 export type ButtonLinkRobeProps = LinkProps & {
   button?: ButtonProps
@@ -37,6 +39,14 @@ export type Linkable<Props extends LinkProps> = Omit<Props, 'href'> & {
 }
 export type LinkableRobeProps = Linkable<LinkRobeProps> & {
   children: ReactNode
+}
+export type MenuRobeProps = MenuProps & {
+  children: ReactNode
+  icon?: JSX.Element
+  loading?: boolean
+} 
+export type MenuButtonRobeProps = MenuButtonProps & IconButtonProps & {
+  loading?: boolean
 }
 export type NavbarRobeProps = Omit<StackProps, 'children'> & {
   children?: ReactNode
