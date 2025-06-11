@@ -34,4 +34,4 @@ export type {
   NavbarRobeProps,
   ProfileRobeProps
 } from './types'
-export const { context: robesContext } = creation
+export const { context: robesContext, use: useRobesContext } = creation
