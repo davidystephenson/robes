@@ -22,6 +22,7 @@ export { default as RowmanceTableRobe } from './RowmanceTableRobe'
 export { default as SwitchRobe } from './SwitchRobe'
 export { default as TableRobe } from './TableRobe'
 export { default as useLinkRobe } from './useLinkRobe'
+export { default as WideFirstColumnRobe } from './WideFirstColumnRobe'
 export type {
   ButtonLinkRobeProps,
   ButtonLinkableRobeProps,

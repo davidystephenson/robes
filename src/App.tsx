@@ -1,14 +1,7 @@
-import ButtonRobe from './ButtonRobe'
-import InputRobe from './InputRobe'
 import RobesProvider from './RobesProvider'
-import { useState } from 'react'
 import TestCells from './TestCells'
 import LongRowmanceRobe from './LongRowmanceRobe'
-import FormRobe from './FormRobe'
-import MenuRobe from './MenuRobe'
-import { MenuItem } from '@chakra-ui/react'
-import ColorSwitchRobe from './ColorSwitchRobe'
-import DeleteMenuItemRobe from './DeleteMenuItemRobe'
+import { useState } from 'react'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -31,14 +24,14 @@ function App() {
     setFiltered(filtered)
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    console.log('a')
-  }
+  // function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  //   event.preventDefault()
+  //   console.log('a')
+  // }
 
   return (
     <RobesProvider>
-      <MenuRobe>
+      {/* <MenuRobe>
         <DeleteMenuItemRobe>Test</DeleteMenuItemRobe>
         <DeleteMenuItemRobe color='blue'>Test</DeleteMenuItemRobe>
         <DeleteMenuItemRobe color='black' icon={undefined}>Test</DeleteMenuItemRobe>
@@ -50,7 +43,7 @@ function App() {
       <FormRobe onSubmit={handleSubmit}>
         <InputRobe name='query' />
         <ButtonRobe type='submit'>Test</ButtonRobe>
-      </FormRobe>
+      </FormRobe> */}
       <LongRowmanceRobe
         data={filtered}
         Cells={TestCells}
