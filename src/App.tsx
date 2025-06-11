@@ -8,6 +8,7 @@ import FormRobe from './FormRobe'
 import MenuRobe from './MenuRobe'
 import { MenuItem } from '@chakra-ui/react'
 import ColorSwitchRobe from './ColorSwitchRobe'
+import DeleteMenuItemRobe from './DeleteMenuItemRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -38,7 +39,9 @@ function App() {
   return (
     <RobesProvider>
       <MenuRobe>
-        <MenuItem>Test</MenuItem>
+        <DeleteMenuItemRobe>Test</DeleteMenuItemRobe>
+        <DeleteMenuItemRobe color='blue'>Test</DeleteMenuItemRobe>
+        <DeleteMenuItemRobe color='black' icon={undefined}>Test</DeleteMenuItemRobe>
       </MenuRobe>
       <ColorSwitchRobe />
       <MenuRobe loading>
