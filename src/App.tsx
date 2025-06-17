@@ -2,6 +2,13 @@ import RobesProvider from './RobesProvider'
 import TestCells from './TestCells'
 import LongRowmanceRobe from './LongRowmanceRobe'
 import { useState } from 'react'
+import RedButtonRobe from './RedButtonRobe'
+import { FaTrash } from 'react-icons/fa'
+import ColorSwitchRobe from './ColorSwitchRobe'
+import DeleteMenuItemRobe from './DeleteMenuItemRobe'
+import MenuRobe from './MenuRobe'
+import RedIconButtonRobe from './RedIconButtonRobe'
+import RedMenuItemRobe from './RedMenuItemRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -31,13 +38,20 @@ function App() {
 
   return (
     <RobesProvider>
-      {/* <MenuRobe>
+      <RedButtonRobe>Test</RedButtonRobe>
+      <RedIconButtonRobe
+        aria-label='Test'
+        icon={<FaTrash />}
+      />
+      <MenuRobe>
         <DeleteMenuItemRobe>Test</DeleteMenuItemRobe>
         <DeleteMenuItemRobe color='blue'>Test</DeleteMenuItemRobe>
         <DeleteMenuItemRobe color='black' icon={undefined}>Test</DeleteMenuItemRobe>
+        <DeleteMenuItemRobe />
+        <RedMenuItemRobe>Archive</RedMenuItemRobe>
       </MenuRobe>
       <ColorSwitchRobe />
-      <MenuRobe loading>
+      {/*<MenuRobe loading>
         <MenuItem>Test</MenuItem>
       </MenuRobe>
       <FormRobe onSubmit={handleSubmit}>

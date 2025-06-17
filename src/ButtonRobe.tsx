@@ -7,19 +7,16 @@ const ButtonRobe = forwardRef<HTMLButtonElement, ButtonProps>((
   ref
 ) => {
   const disabled = useDisabled(props)
-  const buttonView = (
-    <>
-      <Button
-        colorScheme='purple'
-        minW='unset'
-        size='sm'
-        width='fit-content'
-        {...props}
-        isDisabled={disabled}
-        ref={ref}
-      />
-    </>
+  return (
+    <Button
+      colorScheme='purple'
+      minW='unset'
+      size='sm'
+      width='fit-content'
+      {...props}
+      isDisabled={disabled}
+      ref={ref}
+    />
   )
-  return <>{buttonView}</>
 })
 export default ButtonRobe
