@@ -48,10 +48,12 @@ export default function InlineFormRobe(props: InlineFormRobeProps): JSX.Element 
         autoFocus
       />
     )
+  const { stack, ...rest } = props.form ?? {}
   return (
     <FormRobe
-      stack={{ alignItems: 'center', direction: 'row', width: '300px' }}
+      stack={{ alignItems: 'center', direction: 'row', ...stack }}
       onSubmit={handleSubmit}
+      {...rest}
     >
       <InputGroup width='100%'>
         {input}

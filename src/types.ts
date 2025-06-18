@@ -24,6 +24,7 @@ export type ValuePair = {
 }
 export interface InlineFormRobeProps {
   errorMessage?: string
+  form?: FormRobeProps
   label?: string
   value?: string
   onCancel?: () => void
