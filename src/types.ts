@@ -18,6 +18,18 @@ export type ButtonLinkRobeProps = LinkProps & {
   button?: ButtonProps
 }
 export type ButtonLinkableRobeProps = Linkable<ButtonLinkRobeProps>
+export type ValuePair = {
+  value: string
+  onValueChange: (value: string) => void
+}
+export interface InlineFormRobeProps {
+  errorMessage?: string
+  label?: string
+  value?: string
+  onCancel?: () => void
+  onValueChange?: (value: string) => void
+  onSubmit?: () => void
+}
 export type InputRobeProps = InputProps & {
   control?: FormControlProps
   error?: ReactNode

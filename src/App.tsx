@@ -9,6 +9,7 @@ import DeleteMenuItemRobe from './DeleteMenuItemRobe'
 import MenuRobe from './MenuRobe'
 import RedIconButtonRobe from './RedIconButtonRobe'
 import RedMenuItemRobe from './RedMenuItemRobe'
+import InlineFormRobe from './InlineFormRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -18,10 +19,12 @@ const rows = Array.from({ length: 10000 }, (_, i) => {
 })
 
 function App() {
+  const [value, setValue] = useState('')
   const [filtered, setFiltered] = useState(rows)
   function filter(props: {
     query?: string,
   }) {
+    setValue(props.query ?? '')
     const filtered = rows.filter(row => {
       if (!props.query) {
         return true
@@ -38,6 +41,14 @@ function App() {
 
   return (
     <RobesProvider>
+      <InlineFormRobe
+        label='Test'
+        value={value}
+        onValueChange={(value) => {
+          filter({ query: value })
+        }}
+      />
+
       <RedButtonRobe>Test</RedButtonRobe>
       <RedIconButtonRobe
         aria-label='Test'

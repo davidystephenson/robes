@@ -9,6 +9,7 @@ export { default as FormRobe } from './FormRobe'
 export { default as IconButtonRobe } from './IconButtonRobe'
 export { default as IconImpressedRobe } from './IconImpressedRobe'
 export { default as ImpressedRobe } from './ImpressedRobe'
+export { default as InlineFormRobe } from './InlineFormRobe'
 export { default as InputRobe } from './InputRobe'
 export { default as LinkableRobe } from './LinkableRobe'
 export { default as LinkRobe } from './LinkRobe'
@@ -31,6 +32,7 @@ export type {
   ButtonLinkRobeProps,
   ButtonLinkableRobeProps,
   FormRobeProps,
+  InlineFormRobeProps,
   InputRobeProps,
   LayoutRobeProps,
   LinkRobeProps,
