@@ -13,6 +13,7 @@ import {
   StackProps
 } from "@chakra-ui/react"
 import { HTMLAttributes, JSX, ReactNode } from "react"
+import { Actor } from "use-actor"
 
 export type ButtonLinkRobeProps = LinkProps & {
   button?: ButtonProps
@@ -22,15 +23,23 @@ export type ValuePair = {
   value: string
   onValueChange: (value: string) => void
 }
+export interface InlineActorFormProps <Input, Output> {
+  actor: Actor<Input, Output>
+  form?: FormRobeProps
+  input: Input
+  onValueChange: (value: string) => void
+  value: string
+}
 export interface InlineFormRobeProps {
   errorMessage?: string
   form?: FormRobeProps
   label?: string
-  value?: string
   onCancel?: () => void
   onValueChange?: (value: string) => void
-  onSubmit?: () => void
+  onSubmit?: () => void | Promise<void>
+  value?: string
 }
+
 export type InputRobeProps = InputProps & {
   control?: FormControlProps
   error?: ReactNode
