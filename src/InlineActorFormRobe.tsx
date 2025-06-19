@@ -10,6 +10,9 @@ export default function InlineActorFormRobe <Input, Output> (props: {
   onValueChange: (value: string) => void
   value: string
 }): JSX.Element {
+  if (!props.actor.active) {
+    return <></>
+  }
   async function handleSubmit(): Promise<void> {
     await props.actor.act(props.input)
   }
