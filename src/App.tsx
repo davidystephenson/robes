@@ -10,6 +10,7 @@ import MenuRobe from './MenuRobe'
 import RedIconButtonRobe from './RedIconButtonRobe'
 import RedMenuItemRobe from './RedMenuItemRobe'
 import InlineFormRobe from './InlineFormRobe'
+import LinkMenuItemRobe from './LinkMenuItemRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -55,6 +56,7 @@ function App() {
         icon={<FaTrash />}
       />
       <MenuRobe>
+        <LinkMenuItemRobe>Test</LinkMenuItemRobe>
         <DeleteMenuItemRobe>Test</DeleteMenuItemRobe>
         <DeleteMenuItemRobe color='blue'>Test</DeleteMenuItemRobe>
         <DeleteMenuItemRobe color='black' icon={undefined}>Test</DeleteMenuItemRobe>
