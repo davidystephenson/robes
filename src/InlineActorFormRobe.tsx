@@ -15,6 +15,7 @@ export default function InlineActorFormRobe <Input, Output> (props: {
   }
   async function handleSubmit(): Promise<void> {
     await props.actor.act(props.input)
+    props.onValueChange('')
   }
   return (
     <InlineFormRobe
