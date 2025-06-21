@@ -49,7 +49,6 @@ function App() {
           filter({ query: value })
         }}
       />
-
       <RedButtonRobe>Test</RedButtonRobe>
       <RedIconButtonRobe
         aria-label='Test'

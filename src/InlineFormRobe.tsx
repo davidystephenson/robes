@@ -16,6 +16,7 @@ export default function InlineFormRobe(props: InlineFormRobeProps): JSX.Element 
   const submit = props.onSubmit && valued && (
     <ImpressedRobe
       error={props.errorMessage}
+      loading={props.loading}
       size='xs'
       type='submit'
       variant='ghost'

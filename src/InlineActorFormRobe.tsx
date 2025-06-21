@@ -20,6 +20,7 @@ export default function InlineActorFormRobe <Input, Output> (props: {
     <InlineFormRobe
       errorMessage={props.actor.errorMessage}
       form={props.form}
+      loading={props.actor.acting}
       onCancel={props.actor.deactivate}
       onSubmit={handleSubmit}
       onValueChange={props.onValueChange}

@@ -34,6 +34,7 @@ export interface InlineFormRobeProps {
   errorMessage?: string
   form?: FormRobeProps
   label?: string
+  loading?: boolean
   onCancel?: () => void
   onValueChange?: (value: string) => void
   onSubmit?: () => void | Promise<void>
