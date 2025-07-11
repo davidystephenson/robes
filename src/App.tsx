@@ -11,6 +11,7 @@ import RedIconButtonRobe from './RedIconButtonRobe'
 import RedMenuItemRobe from './RedMenuItemRobe'
 import InlineFormRobe from './InlineFormRobe'
 import LinkMenuItemRobe from './LinkMenuItemRobe'
+import FileMenuItemRobe from './FileMenuItemRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -56,6 +57,9 @@ function App() {
       />
       <MenuRobe>
         <LinkMenuItemRobe>Test</LinkMenuItemRobe>
+        <FileMenuItemRobe onFile={(props) => {
+          console.log(props.file)
+        }}>Test</FileMenuItemRobe>
         <DeleteMenuItemRobe>Test</DeleteMenuItemRobe>
         <DeleteMenuItemRobe color='blue'>Test</DeleteMenuItemRobe>
         <DeleteMenuItemRobe color='black' icon={undefined}>Test</DeleteMenuItemRobe>

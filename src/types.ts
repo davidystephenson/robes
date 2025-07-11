@@ -23,6 +23,12 @@ export type ValuePair = {
   value: string
   onValueChange: (value: string) => void
 }
+export interface FileMenuItemRobeProps {
+  children: ReactNode
+  disabled?: boolean
+  loading?: boolean
+  onFile: (props: { file: File }) => void
+} 
 export interface InlineActorFormProps <Input, Output> {
   actor: Actor<Input, Output>
   form?: FormRobeProps
