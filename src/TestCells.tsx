@@ -1,4 +1,5 @@
 import { Td } from "@chakra-ui/react"
+import FullCellRobe from "./FullCellRobe"
 
 export default function TestCells(props: {
   row: {
@@ -6,6 +7,13 @@ export default function TestCells(props: {
     email: string
   }
 }) {
+  if (props.row.name === 'Item 2') {
+    return (
+      <FullCellRobe bg='red'>
+        {props.row.name}
+      </FullCellRobe>
+    )
+  }
   return (
     <>
       <Td>
