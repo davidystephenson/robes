@@ -23,7 +23,7 @@ const rows = Array.from({ length: 10000 }, (_, i) => {
 function App() {
   const [value, setValue] = useState('')
   const [filtered, setFiltered] = useState(rows)
-  function filter(props: {
+  function onSearch(props: {
     query?: string,
   }) {
     setValue(props.query ?? '')
@@ -47,7 +47,7 @@ function App() {
         label='Test'
         value={value}
         onValueChange={(value) => {
-          filter({ query: value })
+          onSearch({ query: value })
         }}
       />
       <RedButtonRobe>Test</RedButtonRobe>
@@ -78,7 +78,7 @@ function App() {
         data={filtered}
         Cells={TestCells}
         columns={['Name', 'Email']}
-        filter={filter}
+        onSearch={onSearch}
       />
     </RobesProvider>
   )
