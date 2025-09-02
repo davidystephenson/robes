@@ -12,6 +12,9 @@ import RedMenuItemRobe from './RedMenuItemRobe'
 import InlineFormRobe from './InlineFormRobe'
 import LinkMenuItemRobe from './LinkMenuItemRobe'
 import FileMenuItemRobe from './FileMenuItemRobe'
+import useActor from 'use-actor'
+import ImpressedActorRobe from './ImpressedActorRobe'
+import IconImpressedActorRobe from './IconImpressedActorRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -20,7 +23,13 @@ const rows = Array.from({ length: 10000 }, (_, i) => {
   }
 })
 
+async function logName (props: { name: string }): Promise<string> {
+  console.log(props.name.toUpperCase())
+  return props.name.toUpperCase()
+}
+
 function App() {
+  const actor = useActor({ label: 'Log Name', action: logName })
   const [value, setValue] = useState('')
   const [filtered, setFiltered] = useState(rows)
   function onSearch(props: {
@@ -43,6 +52,18 @@ function App() {
 
   return (
     <RobesProvider>
+      <IconImpressedActorRobe
+        actor={actor}
+        aria-label='Log Name'
+        icon={<FaTrash />}
+        input={{ name: value }}
+      />
+      <ImpressedActorRobe
+        actor={actor}
+        input={{ name: value }}
+      >
+        Log Name
+      </ImpressedActorRobe>
       <InlineFormRobe
         label='Test'
         value={value}

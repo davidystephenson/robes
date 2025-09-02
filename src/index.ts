@@ -10,7 +10,9 @@ export { default as FullCellRobe } from './FullCellRobe'
 export { default as FormRobe } from './FormRobe'
 export { default as IconButtonRobe } from './IconButtonRobe'
 export { default as IconImpressedRobe } from './IconImpressedRobe'
+export { default as IconImpressedActorRobe } from './IconImpressedActorRobe'
 export { default as ImpressedRobe } from './ImpressedRobe'
+export { default as ImpressedActorRobe } from './ImpressedActorRobe'
 export { default as InlineActorFormRobe } from './InlineActorFormRobe'
 export { default as InlineFormRobe } from './InlineFormRobe'
 export { default as InputRobe } from './InputRobe'
@@ -37,6 +39,8 @@ export type {
   ButtonLinkableRobeProps,
   FileMenuItemRobeProps,
   FormRobeProps,
+  IconImpressedActorRobeProps,
+  ImpressedActorRobeProps,
   InlineActorFormProps,
   InlineFormRobeProps,
   InputRobeProps,

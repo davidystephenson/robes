@@ -1,4 +1,3 @@
-import { ImpressedProps } from "impressed"
 import {
   BoxProps,
   ButtonProps,
@@ -12,7 +11,8 @@ import {
   MenuProps,
   StackProps
 } from "@chakra-ui/react"
-import { HTMLAttributes, JSX, ReactNode } from "react"
+import { ImpressedProps } from "impressed"
+import { ComponentType, HTMLAttributes, JSX, ReactNode, RefAttributes } from "react"
 import { Actor } from "use-actor"
 
 export type ButtonLinkRobeProps = LinkProps & {
@@ -28,8 +28,8 @@ export interface FileMenuItemRobeProps {
   disabled?: boolean
   loading?: boolean
   onFile: (props: { file: File }) => void
-} 
-export interface InlineActorFormProps <Input, Output> {
+}
+export interface InlineActorFormProps<Input, Output> {
   actor: Actor<Input, Output>
   form?: FormRobeProps
   input: Input
@@ -73,7 +73,7 @@ export type MenuRobeProps = MenuProps & {
   children: ReactNode
   icon?: JSX.Element
   loading?: boolean
-} 
+}
 export type MenuButtonRobeProps = MenuButtonProps & IconButtonProps & {
   loading?: boolean
 }
@@ -90,3 +90,13 @@ export type ProfileRobeProps = Omit<MenuProps, 'children'> & {
   onLogout?: () => void | Promise<void>
   button?: ImpressedProps
 }
+export type ImpressedActorRobeProps <Input, Output> = {
+  actor: Actor<Input, Output>
+  input: Input
+  leftButtons?: JSX.Element;
+  IconView?: ComponentType<IconButtonProps & RefAttributes<HTMLButtonElement>>;
+  orientation?: 'horizontal' | 'vertical';
+  type?: 'button' | 'submit' | 'reset';
+  View?: ComponentType<ButtonProps & RefAttributes<HTMLButtonElement>>;
+} & ButtonProps
+export type IconImpressedActorRobeProps <Input, Output> = Omit<ImpressedActorRobeProps<Input, Output>, 'View'> & IconButtonProps
