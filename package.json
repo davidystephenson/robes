@@ -55,7 +55,7 @@
     "context-creator": "^0.1.25",
     "impressed": "^0.1.6",
     "reeling": "^0.1.3",
-    "rowmance": "^0.1.10",
+    "rowmance": "^0.1.11",
     "use-actor": "^0.1.4"
   },
   "devDependencies": {

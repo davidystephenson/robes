@@ -97,8 +97,9 @@ function App() {
       </FormRobe> */}
       <LongRowmanceRobe
         data={filtered}
+        debug
         Cells={TestCells}
-        columns={['Name', 'Email']}
+        columns={['Name!!!', 'Email']}
         onSearch={onSearch}
       />
     </RobesProvider>
