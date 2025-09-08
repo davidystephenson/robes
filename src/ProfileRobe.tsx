@@ -24,9 +24,7 @@ export default function ProfileRobe (props: ProfileRobeProps): JSX.Element {
         as={ImpressedRobe}
         isLoading={loading}
         {...buttonProps}
-      >
-        {children}
-      </MenuButton>
+      />
       <MenuList>
         <MenuItem onClick={handleClick}>
           <ColorSwitchRobe inert />
@@ -37,6 +35,7 @@ export default function ProfileRobe (props: ProfileRobeProps): JSX.Element {
         >
           Logout
         </MenuItem>
+        {children}
       </MenuList>
     </Menu>
   )

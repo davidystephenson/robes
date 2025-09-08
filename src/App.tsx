@@ -17,6 +17,8 @@ import ImpressedActorRobe from './ImpressedActorRobe'
 import IconImpressedActorRobe from './IconImpressedActorRobe'
 import IconButtonLinkRobe from './IconButtonLinkRobe'
 import IconButtonLinkableRobe from './IconButtonLinkableRobe'
+import ProfileRobe from './ProfileRobe'
+import { MenuItem } from '@chakra-ui/react'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -54,6 +56,9 @@ function App() {
 
   return (
     <RobesProvider>
+      <ProfileRobe button={{ children: 'Profile' }}>
+        <MenuItem>Account Settings</MenuItem>
+      </ProfileRobe>
       <IconButtonLinkRobe href='https://example.com' button={{ 'aria-label': 'Test', icon: <FaTrash /> }} />
       <IconButtonLinkableRobe href='https://example.com' button={{ 'aria-label': 'Test', icon: <FaTrash /> }} />
       <IconImpressedActorRobe
