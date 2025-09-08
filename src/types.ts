@@ -12,7 +12,7 @@ import {
   StackProps
 } from "@chakra-ui/react"
 import { ImpressedProps } from "impressed"
-import { ComponentType, HTMLAttributes, JSX, ReactElement, ReactNode, RefAttributes } from "react"
+import { ComponentType, HTMLAttributes, JSX, ReactNode, RefAttributes } from "react"
 import { Actor } from "use-actor"
 
 export type ButtonLinkRobeProps = LinkProps & {
