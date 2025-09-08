@@ -9,7 +9,6 @@ const IconButtonRobe = forwardRef<HTMLButtonElement, IconButtonProps>((
   const disabled = useDisabled(props)
   return (
     <IconButton
-      colorScheme='red'
       isDisabled={disabled}
       size='sm'
       variant='link'
