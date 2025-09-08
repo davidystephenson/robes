@@ -54,8 +54,8 @@ function App() {
 
   return (
     <RobesProvider>
-      <IconButtonLinkRobe aria-label='Test' href='https://example.com' button={{ icon: <FaTrash /> }} />
-      <IconButtonLinkableRobe aria-label='Test' href='https://example.com' button={{ icon: <FaTrash /> }} />
+      <IconButtonLinkRobe href='https://example.com' button={{ 'aria-label': 'Test', icon: <FaTrash /> }} />
+      <IconButtonLinkableRobe href='https://example.com' button={{ 'aria-label': 'Test', icon: <FaTrash /> }} />
       <IconImpressedActorRobe
         actor={actor}
         aria-label='Log Name'

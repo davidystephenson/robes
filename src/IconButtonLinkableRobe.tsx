@@ -5,7 +5,7 @@ import IconButtonRobe from './IconButtonRobe'
 
 export default function IconButtonLinkableRobe (props: IconButtonLinkableRobeProps): JSX.Element {
   if (props.href == null) {
-    return <IconButtonRobe aria-label={props['aria-label']} {...props.button} />
+    return <IconButtonRobe {...props.button} />
   }
   return <IconButtonLinkRobe {...props} href={props.href} />
 }

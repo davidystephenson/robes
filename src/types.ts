@@ -12,7 +12,7 @@ import {
   StackProps
 } from "@chakra-ui/react"
 import { ImpressedProps } from "impressed"
-import { ComponentType, HTMLAttributes, JSX, ReactNode, RefAttributes } from "react"
+import { ComponentType, HTMLAttributes, JSX, ReactElement, ReactNode, RefAttributes } from "react"
 import { Actor } from "use-actor"
 
 export type ButtonLinkRobeProps = LinkProps & {
@@ -26,8 +26,7 @@ export interface FileMenuItemRobeProps {
   onFile: (props: { file: File }) => void
 }
 export type IconButtonLinkRobeProps = LinkProps & {
-  'aria-label': string
-  button?: Omit<IconButtonProps, 'aria-label'>
+  button: IconButtonProps
 }
 export type IconButtonLinkableRobeProps = Linkable<IconButtonLinkRobeProps>
 export type IconImpressedActorRobeProps <Input, Output> = Omit<ImpressedActorRobeProps<Input, Output>, 'View'> & IconButtonProps

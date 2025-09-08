@@ -7,7 +7,7 @@ export default function IconButtonLinkRobe (props: IconButtonLinkRobeProps): JSX
   const { 'aria-label': ariaLabel, button, children, ...rest } = props
   return (
     <Link {...rest}>
-      <IconButtonRobe aria-label={ariaLabel} {...button}>
+      <IconButtonRobe {...button}>
         {children}
       </IconButtonRobe>
     </Link>
