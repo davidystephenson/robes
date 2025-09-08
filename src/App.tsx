@@ -15,6 +15,8 @@ import FileMenuItemRobe from './FileMenuItemRobe'
 import useActor from 'use-actor'
 import ImpressedActorRobe from './ImpressedActorRobe'
 import IconImpressedActorRobe from './IconImpressedActorRobe'
+import IconButtonLinkRobe from './IconButtonLinkRobe'
+import IconButtonLinkableRobe from './IconButtonLinkableRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -52,6 +54,8 @@ function App() {
 
   return (
     <RobesProvider>
+      <IconButtonLinkRobe aria-label='Test' href='https://example.com' button={{ icon: <FaTrash /> }} />
+      <IconButtonLinkableRobe aria-label='Test' href='https://example.com' button={{ icon: <FaTrash /> }} />
       <IconImpressedActorRobe
         actor={actor}
         aria-label='Log Name'

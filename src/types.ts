@@ -19,16 +19,27 @@ export type ButtonLinkRobeProps = LinkProps & {
   button?: ButtonProps
 }
 export type ButtonLinkableRobeProps = Linkable<ButtonLinkRobeProps>
-export type ValuePair = {
-  value: string
-  onValueChange: (value: string) => void
-}
 export interface FileMenuItemRobeProps {
   children: ReactNode
   disabled?: boolean
   loading?: boolean
   onFile: (props: { file: File }) => void
 }
+export type IconButtonLinkRobeProps = LinkProps & {
+  'aria-label': string
+  button?: Omit<IconButtonProps, 'aria-label'>
+}
+export type IconButtonLinkableRobeProps = Linkable<IconButtonLinkRobeProps>
+export type IconImpressedActorRobeProps <Input, Output> = Omit<ImpressedActorRobeProps<Input, Output>, 'View'> & IconButtonProps
+export type ImpressedActorRobeProps <Input, Output> = {
+  actor: Actor<Input, Output>
+  input: Input
+  leftButtons?: JSX.Element;
+  IconView?: ComponentType<IconButtonProps & RefAttributes<HTMLButtonElement>>;
+  orientation?: 'horizontal' | 'vertical';
+  type?: 'button' | 'submit' | 'reset';
+  View?: ComponentType<ButtonProps & RefAttributes<HTMLButtonElement>>;
+} & ButtonProps
 export interface InlineActorFormProps<Input, Output> {
   actor: Actor<Input, Output>
   form?: FormRobeProps
@@ -90,13 +101,7 @@ export type ProfileRobeProps = Omit<MenuProps, 'children'> & {
   onLogout?: () => void | Promise<void>
   button?: ImpressedProps
 }
-export type ImpressedActorRobeProps <Input, Output> = {
-  actor: Actor<Input, Output>
-  input: Input
-  leftButtons?: JSX.Element;
-  IconView?: ComponentType<IconButtonProps & RefAttributes<HTMLButtonElement>>;
-  orientation?: 'horizontal' | 'vertical';
-  type?: 'button' | 'submit' | 'reset';
-  View?: ComponentType<ButtonProps & RefAttributes<HTMLButtonElement>>;
-} & ButtonProps
-export type IconImpressedActorRobeProps <Input, Output> = Omit<ImpressedActorRobeProps<Input, Output>, 'View'> & IconButtonProps
+export type ValuePair = {
+  value: string
+  onValueChange: (value: string) => void
+}

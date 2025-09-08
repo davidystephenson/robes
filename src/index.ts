@@ -9,6 +9,8 @@ export { default as FileMenuItemRobe } from './FileMenuItemRobe'
 export { default as FullCellRobe } from './FullCellRobe'
 export { default as FormRobe } from './FormRobe'
 export { default as IconButtonRobe } from './IconButtonRobe'
+export { default as IconButtonLinkRobe } from './IconButtonLinkRobe'
+export { default as IconButtonLinkableRobe } from './IconButtonLinkableRobe'
 export { default as IconImpressedRobe } from './IconImpressedRobe'
 export { default as IconImpressedActorRobe } from './IconImpressedActorRobe'
 export { default as ImpressedRobe } from './ImpressedRobe'
@@ -40,6 +42,8 @@ export type {
   FileMenuItemRobeProps,
   FormRobeProps,
   IconImpressedActorRobeProps,
+  IconButtonLinkRobeProps,
+  IconButtonLinkableRobeProps,
   ImpressedActorRobeProps,
   InlineActorFormProps,
   InlineFormRobeProps,
