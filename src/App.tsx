@@ -21,6 +21,7 @@ import ProfileRobe from './ProfileRobe'
 import { MenuItem } from '@chakra-ui/react'
 import PopoverButtonRobe from './PopoverButtonRobe'
 import PopoverIconButtonRobe from './PopoverIconButtonRobe'
+import CurtainRobe from './CurtainRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -29,7 +30,7 @@ const rows = Array.from({ length: 10000 }, (_, i) => {
   }
 })
 
-async function logName (props: { name: string }): Promise<string> {
+async function logName(props: { name: string }): Promise<string> {
   console.log(props.name.toUpperCase())
   return props.name.toUpperCase()
 }
@@ -58,29 +59,31 @@ function App() {
 
   return (
     <RobesProvider>
-      <PopoverIconButtonRobe aria-label='Info' icon={<FaTrash />}>
-        Hello, this is a popover message!
-      </PopoverIconButtonRobe>
-      <PopoverButtonRobe label="Click me">
-        Hello, this is a popover message!
-      </PopoverButtonRobe>
-      <ProfileRobe button={{ children: 'Profile' }}>
-        <MenuItem>Account Settings</MenuItem>
-      </ProfileRobe>
-      <IconButtonLinkRobe href='https://example.com' button={{ 'aria-label': 'Test', icon: <FaTrash /> }} />
-      <IconButtonLinkableRobe href='https://example.com' button={{ 'aria-label': 'Test', icon: <FaTrash /> }} />
-      <IconImpressedActorRobe
-        actor={actor}
-        aria-label='Log Name'
-        icon={<FaTrash />}
-        input={{ name: value }}
-      />
-      <ImpressedActorRobe
-        actor={actor}
-        input={{ name: value }}
-      >
-        Log Name
-      </ImpressedActorRobe>
+      <CurtainRobe open={value.length > 0} hider={<div>Type to search</div>}>
+        <PopoverIconButtonRobe aria-label='Info' icon={<FaTrash />}>
+          Hello, this is a popover message!
+        </PopoverIconButtonRobe>
+        <PopoverButtonRobe label="Click me">
+          Hello, this is a popover message!
+        </PopoverButtonRobe>
+        <ProfileRobe button={{ children: 'Profile' }}>
+          <MenuItem>Account Settings</MenuItem>
+        </ProfileRobe>
+        <IconButtonLinkRobe href='https://example.com' button={{ 'aria-label': 'Test', icon: <FaTrash /> }} />
+        <IconButtonLinkableRobe href='https://example.com' button={{ 'aria-label': 'Test', icon: <FaTrash /> }} />
+        <IconImpressedActorRobe
+          actor={actor}
+          aria-label='Log Name'
+          icon={<FaTrash />}
+          input={{ name: value }}
+        />
+        <ImpressedActorRobe
+          actor={actor}
+          input={{ name: value }}
+        >
+          Log Name
+        </ImpressedActorRobe>
+      </CurtainRobe>
       <InlineFormRobe
         label='Test'
         value={value}

@@ -3,6 +3,7 @@ export { default as ButtonRobe } from './ButtonRobe'
 export { default as ButtonLinkRobe } from './ButtonLinkRobe'
 export { default as ButtonLinkableRobe } from './ButtonLinkableRobe'
 export { default as ColorSwitchRobe } from './ColorSwitchRobe'
+export { default as CurtainRobe } from './CurtainRobe'
 export { default as DeleteMenuItemRobe } from './DeleteMenuItemRobe'
 export { default as DeleteIconButtonRobe } from './DeleteIconButtonRobe'
 export { default as FileMenuItemRobe } from './FileMenuItemRobe'
@@ -41,6 +42,7 @@ export { default as WideFirstColumnRobe } from './WideFirstColumnRobe'
 export type {
   ButtonLinkRobeProps,
   ButtonLinkableRobeProps,
+  CurtainRobeProps,
   FileMenuItemRobeProps,
   FormRobeProps,
   IconImpressedActorRobeProps,

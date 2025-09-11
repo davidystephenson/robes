@@ -19,6 +19,11 @@ export type ButtonLinkRobeProps = LinkProps & {
   button?: ButtonProps
 }
 export type ButtonLinkableRobeProps = Linkable<ButtonLinkRobeProps>
+export type CurtainRobeProps = {
+  children?: ReactNode
+  open?: boolean
+  hider?: ReactNode
+}
 export interface FileMenuItemRobeProps {
   children: ReactNode
   disabled?: boolean
