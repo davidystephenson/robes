@@ -19,6 +19,8 @@ import IconButtonLinkRobe from './IconButtonLinkRobe'
 import IconButtonLinkableRobe from './IconButtonLinkableRobe'
 import ProfileRobe from './ProfileRobe'
 import { MenuItem } from '@chakra-ui/react'
+import PopoverButtonRobe from './PopoverButtonRobe'
+import PopoverIconButtonRobe from './PopoverIconButtonRobe'
 
 const rows = Array.from({ length: 10000 }, (_, i) => {
   return {
@@ -56,6 +58,12 @@ function App() {
 
   return (
     <RobesProvider>
+      <PopoverIconButtonRobe aria-label='Info' icon={<FaTrash />}>
+        Hello, this is a popover message!
+      </PopoverIconButtonRobe>
+      <PopoverButtonRobe label="Click me">
+        Hello, this is a popover message!
+      </PopoverButtonRobe>
       <ProfileRobe button={{ children: 'Profile' }}>
         <MenuItem>Account Settings</MenuItem>
       </ProfileRobe>

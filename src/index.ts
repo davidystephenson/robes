@@ -25,6 +25,8 @@ export { default as LongRowmanceRobe } from './LongRowmanceRobe'
 export { default as MenuButtonRobe } from './MenuButtonRobe'
 export { default as MenuRobe } from './MenuRobe'
 export { default as ReelingRobe } from './ReelingRobe'
+export { default as PopoverButtonRobe } from './PopoverButtonRobe'
+export { default as PopoverIconButtonRobe } from './PopoverIconButtonRobe'
 export { default as ProfileRobe } from './ProfileRobe'
 export { default as RedButtonRobe } from './RedButtonRobe'
 export { default as RedIconButtonRobe } from './RedIconButtonRobe'
@@ -54,6 +56,8 @@ export type {
   MenuRobeProps,
   MenuButtonRobeProps,
   NavbarRobeProps,
+  PopoverButtonRobeProps,
+  PopoverIconButtonRobeProps,
   ProfileRobeProps
 } from './types'
 export const { context: robesContext, use: useRobesContext } = creation

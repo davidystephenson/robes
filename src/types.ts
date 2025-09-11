@@ -100,6 +100,13 @@ export type ProfileRobeProps = Omit<MenuProps, 'children'> & {
   onLogout?: () => void | Promise<void>
   button?: ImpressedProps
 }
+export type PopoverButtonRobeProps = {
+  label?: string | number | JSX.Element
+  children: ReactNode
+} & ButtonProps
+export type PopoverIconButtonRobeProps = {
+  children: ReactNode
+} & IconButtonProps
 export type ValuePair = {
   value: string
   onValueChange: (value: string) => void
