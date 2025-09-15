@@ -5,8 +5,12 @@ import useLinkRobe from './useLinkRobe'
 
 export default function LinkRobe (props: LinkRobeProps): JSX.Element {
   const link = useLinkRobe(props)
+  const { active, debug, ...rest } = props
+  if (debug) {
+    console.debug('LinkRobe props', props)
+  }
   return (
-    <Link {...props} {...link}>
+    <Link {...rest} {...link}>
       {props.children}
     </Link>
   )

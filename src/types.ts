@@ -77,6 +77,7 @@ export type LayoutRobeProps = ContainerProps & {
 }
 export type LinkRobeProps = LinkProps & {
   active?: boolean
+  debug?: boolean
 }
 export type Linkable<Props extends LinkProps> = Omit<Props, 'href'> & {
   href?: string | null
